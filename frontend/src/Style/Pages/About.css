@@ -1,0 +1,293 @@
+/* About Container */
+.about-container {
+    padding: 80px 0 0; /* Removed side padding for full-width footer */
+    background: linear-gradient(135deg, #f4f4f9 0%, #e0e7ff 100%); /* Subtle gradient */
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Intro Section */
+  .intro-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 5%;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .intro-section h1 {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .intro-section h1::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .intro-section p {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Details Section (Education & Experience) */
+  .details-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 5% 60px; /* Side padding for content, space for footer */
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .education, .experience {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .education h2, .experience h2 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #1f1c2c;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .education h2::after, .experience h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    bottom: -5px;
+    left: 0;
+  }
+  
+  /* Divider Line */
+  .divider {
+    width: 2px;
+    background: linear-gradient(to bottom, #ff6b6b, #4ecdc4);
+    height: auto;
+    align-self: stretch;
+  }
+  
+  /* Detail Items */
+  .detail-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
+  
+  .detail-item:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .detail-item.visible {
+    opacity: 1;
+  }
+  
+  .tick {
+    color: #4ecdc4;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .detail-item.visible .tick {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .content h3 {
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .content .degree, .content .role {
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #ff6b6b;
+    font-weight: 500;
+  }
+  
+  .content .duration {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #999;
+    margin: 5px 0;
+  }
+  
+  .content .details {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .detail-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    bottom: -10px;
+    left: 0;
+    opacity: 0.7;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #1f1c2c;
+    color: white;
+    padding: 40px 0; /* Removed side padding for full width */
+    text-align: center;
+    width: 100%; /* Ensure full width */
+    margin-top: auto; /* Push to bottom */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 0 5%; /* Content padding */
+  }
+  
+  .footer-links, .footer-services, .footer-social {
+    margin: 20px;
+  }
+  
+  .footer-links h3, .footer-services h3, .footer-social h3 {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .footer-links a, .footer-services p {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    margin: 8px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .footer-social a {
+    margin: 0 10px;
+    color: #ccc;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .footer-social-icon:hover {
+    color: #4ecdc4;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.5); /* Glowing effect */
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    padding: 20px 5%; /* Content padding */
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
+  .footer-bottom a {
+    color: #ff6b6b;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  .footer-bottom a:hover {
+    color: #4ecdc4;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .intro-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .intro-section p {
+      font-size: 1rem;
+    }
+  
+    .details-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .divider {
+      display: none;
+    }
+  
+    .education h2, .experience h2 {
+      font-size: 1.8rem;
+    }
+  
+    .content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .content .degree, .content .role {
+      font-size: 1rem;
+    }
+  
+    .content .duration, .content .details {
+      font-size: 0.9rem;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+    }
+  }
