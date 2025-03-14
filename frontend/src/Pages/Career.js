@@ -38,7 +38,7 @@ const Career = () => {
     const endpoint = activeTab === "personal" ? "/api/personal-inquiry" : "/api/professional-inquiry";
   
     try {
-      const response = await fetch(`https://portfolio-afbq.onrender.com${endpoint}`, {
+      const response = await fetch(`https://webnew-zdtz.onrender.com${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
