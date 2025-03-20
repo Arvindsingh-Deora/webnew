@@ -1,27 +1,24 @@
 import React, { useState } from "react";
-import '../Style/Pages/Carrer.css'; // Fixed typo
+import '../Style/Pages/Carrer.css'; 
 import qrCodeImage from '../assets/qrCodeImage.jpg';
 
 const Career = () => {
   const [activeTab, setActiveTab] = useState("personal");
   const [showModal, setShowModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     remarks: "",
   });
-  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
 
-  const openModal = (service) => {
-    setSelectedService(service);
-    setShowModal(true);
-  };
+ 
 
   const closeModal = () => {
     setShowModal(false);
@@ -38,193 +35,81 @@ const Career = () => {
     const endpoint = activeTab === "personal" ? "/api/personal-inquiry" : "/api/professional-inquiry";
   
     try {
-      const response = await fetch(`https://webnew-zdtz.onrender.com${endpoint}`, {
+      const response = await fetch(`https://portfolio-afbq.onrender.com${endpoint}`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
   
+      console.log("Active Tab:", activeTab);
+      console.log("Response Status:", response.status);
+  
       if (response.ok) {
-        setSubmitMessage("Inquiry submitted successfully!");
+        console.log("Form submitted successfully");
+        setShowSuccessPopup(false); // Ensure it's hidden before showing again
+        setTimeout(() => {
+          setShowSuccessPopup(true);
+        }, 10);
         setFormData({ name: "", email: "", subject: "", remarks: "" });
+  
+        // Hide the success popup after 3 seconds
+        setTimeout(() => {
+          setShowSuccessPopup(false);
+        }, 3000);
       } else {
-        setSubmitMessage("Failed to submit inquiry. Please try again.");
+        alert("Failed to submit inquiry. Please try again.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      setSubmitMessage("An error occurred. Please try again later.");
+      alert("An error occurred. Please try again later.");
     }
-  
-    setTimeout(() => setSubmitMessage(""), 3000);
   };
-
-  const services = [
-    {
-      title: "One Meeting",
-      price: "Rs 100",
-      description: "A one-on-one consultation to discuss your ideas or projects.",
-      thumbnail: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-    },
-    {
-      title: "Frontend Work",
-      price: "Rs 10000",
-      description: "Custom frontend development with modern frameworks like React.",
-      thumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-    },
-    {
-      title: "Full Stack Work",
-      price: "Rs 20000",
-      description: "End-to-end development with MERN stack for scalable solutions.",
-      thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-    },
-  ];
+  
 
   return (
     <div className="career-container">
       <h1>Career & Services</h1>
-      <div className="services-grid">
-        {services.map((service, index) => (
-          <div key={index} className="service-card" onClick={() => openModal(service)}>
-            <img src={service.thumbnail} alt={`${service.title} Thumbnail`} className="service-thumbnail" />
-            <div className="service-info">
-              <h2>{service.title}</h2>
-              <p className="price">{service.price}</p>
-              <p>{service.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
 
       <div className="tabs">
-        <button
-          className={`tab-button ${activeTab === "personal" ? "active" : ""}`}
-          onClick={() => handleTabChange("personal")}
-        >
+        <button className={`tab-button ${activeTab === "personal" ? "active" : ""}`} onClick={() => handleTabChange("personal")}>
           Personal Inquiry
         </button>
-        <button
-          className={`tab-button ${activeTab === "professional" ? "active" : ""}`}
-          onClick={() => handleTabChange("professional")}
-        >
+        <button className={`tab-button ${activeTab === "professional" ? "active" : ""}`} onClick={() => handleTabChange("professional")}>
           Professional Inquiry
         </button>
       </div>
 
       <div className="form-container">
-        {activeTab === "personal" && (
-          <form className="inquiry-form" onSubmit={handleSubmit}>
-            <h2>Personal Inquiry</h2>
-            <div className="form-group">
-              <label htmlFor="personal-name">Name</label>
-              <input
-                type="text"
-                id="personal-name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="personal-email">Email ID</label>
-              <input
-                type="email"
-                id="personal-email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="personal-subject">Subject</label>
-              <input
-                type="text"
-                id="personal-subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleInputChange}
-                placeholder="Subject"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="personal-remarks">Remarks</label>
-              <textarea
-                id="personal-remarks"
-                name="remarks"
-                value={formData.remarks}
-                onChange={handleInputChange}
-                placeholder="Your Remarks"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="submit-btn">Submit</button>
-            {submitMessage && <p className="submit-message">{submitMessage}</p>}
-          </form>
-        )}
-
-        {activeTab === "professional" && (
-          <form className="inquiry-form" onSubmit={handleSubmit}>
-            <h2>Professional Inquiry</h2>
-            <div className="form-group">
-              <label htmlFor="professional-name">Name</label>
-              <input
-                type="text"
-                id="professional-name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="professional-email">Email ID</label>
-              <input
-                type="email"
-                id="professional-email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="professional-subject">Subject</label>
-              <input
-                type="text"
-                id="professional-subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleInputChange}
-                placeholder="Subject"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="professional-remarks">Remarks</label>
-              <textarea
-                id="professional-remarks"
-                name="remarks"
-                value={formData.remarks}
-                onChange={handleInputChange}
-                placeholder="Your Remarks"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="submit-btn">Submit</button>
-            {submitMessage && <p className="submit-message">{submitMessage}</p>}
-          </form>
-        )}
+        <form className="inquiry-form" onSubmit={handleSubmit}>
+          <h2>{activeTab === "personal" ? "Personal Inquiry" : "Professional Inquiry"}</h2>
+          <div className="form-group">
+            <label>Name</label>
+            <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name" required />
+          </div>
+          <div className="form-group">
+            <label>Email ID</label>
+            <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Your Email" required />
+          </div>
+          <div className="form-group">
+            <label>Subject</label>
+            <input type="text" name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Subject" required />
+          </div>
+          <div className="form-group">
+            <label>Remarks</label>
+            <textarea name="remarks" value={formData.remarks} onChange={handleInputChange} placeholder="Your Remarks" rows="5" required></textarea>
+          </div>
+          <button type="submit" className="submit-btn">Submit</button>
+        </form>
       </div>
+
+      {showSuccessPopup && (
+        <div className="success-popup">
+          <div className="success-content">
+            <h2>✅ Success!</h2>
+            <p>Your inquiry has been submitted successfully.</p>
+          </div>
+        </div>
+      )}
 
       {showModal && (
         <div className="modal-overlay" onClick={closeModal}>
