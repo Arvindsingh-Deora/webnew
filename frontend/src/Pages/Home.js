@@ -91,7 +91,7 @@ const Home = () => {
           </div>
           <div className="cta-buttons">
     <a href="/Arvind_SDE_Resume.pdf" download className="resume-btn">Download Resume</a>
-    <a href="/About" className="contact-btn">Contact Me</a>
+    <a href="/Career" className="contact-btn">Contact Me</a>
 </div>
 
         </div>
