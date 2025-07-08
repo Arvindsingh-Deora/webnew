@@ -10,20 +10,7 @@ import chatSystemThumb from '../assets/Thumnail/Chat System.png';
 
 // Project data
 const projectsData = [
-  {
-    title: "Bubble Game",
-    description: "A fun, interactive game where players pop bubbles against a timer, built with HTML, CSS, and JavaScript to test reflexes.",
-    link: "https://arvindsingh-deora.github.io/bubble-Game-by-Arvind-vapi/",
-    thumbnail: bubbleGameThumb,
-    tech: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "To-Do List",
-    description: "A sleek task management app built with React, offering a smooth and efficient user experience.",
-    link: "https://master--cheerful-cassata-2c9e67.netlify.app/",
-    thumbnail: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-    tech: ["React"],
-  },
+  
   {
     title: "Mechcare",
     description: "India's Biggest Mechanic Platform, connecting users with reliable automotive services.",
@@ -44,6 +31,20 @@ const projectsData = [
     link: "https://chat-application-three-pearl.vercel.app/",
     thumbnail: chatSystemThumb,
     tech: ["React", "Node.js", "Socket.io"],
+  },
+  {
+    title: "Bubble Game",
+    description: "A fun, interactive game where players pop bubbles against a timer, built with HTML, CSS, and JavaScript to test reflexes.",
+    link: "https://arvindsingh-deora.github.io/bubble-Game-by-Arvind-vapi/",
+    thumbnail: bubbleGameThumb,
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "To-Do List",
+    description: "A sleek task management app built with React, offering a smooth and efficient user experience.",
+    link: "https://master--cheerful-cassata-2c9e67.netlify.app/",
+    thumbnail: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+    tech: ["React"],
   },
 ];
 
