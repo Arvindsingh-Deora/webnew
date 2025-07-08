@@ -1,5 +1,14 @@
 import React from 'react';
 import '../Style/Pages/Notes.css'; // create this file for custom styling
+import { Helmet } from 'react-helmet';
+
+<Helmet>
+  <title>Free DBMS, CN, OS, OOPS Notes by Arvind | Download PDFs</title>
+  <meta name="description" content="Download Arvind's handwritten DBMS, Computer Network, Operating System, and OOPS notes in PDF format. Best notes for interviews, placements and exams." />
+  <meta name="keywords" content="Arvind DBMS Notes, Computer Network Notes, OS Notes, OOPS Notes, Vapi Notes, Engineering Notes PDF" />
+  <meta name="author" content="Arvind Deora" />
+</Helmet>
+
 
 const notesData = [
   { title: "DBMS Notes", file: "dbms-notes.pdf" },
