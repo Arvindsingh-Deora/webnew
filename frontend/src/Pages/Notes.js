@@ -26,9 +26,19 @@ const Notes = () => {
         {notesData.map((note, index) => (
           <div className="note-card" key={index}>
             <h2>{note.title}</h2>
-            <a href={`/Notes/${note.file}`} download>
-              <button className="download-btn">⬇️ Download PDF</button>
-            </a>
+            <a
+  href={`/Notes/${note.file}`}
+  download
+  onClick={() =>
+    window.gtag && window.gtag('event', 'download', {
+      event_category: 'PDF',
+      event_label: note.title,
+    })
+  }
+>
+  <button className="download-btn">⬇️ Download PDF</button>
+</a>
+
           </div>
         ))}
       </div>
