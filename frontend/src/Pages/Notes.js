@@ -2,10 +2,10 @@ import React from 'react';
 import '../Style/Pages/Notes.css'; // create this file for custom styling
 
 const notesData = [
-  { title: "DBMS Notes", file: "Arvind DBMS Notes" },
-  { title: "Operating System", file: "Arvind Operating system" },
-  { title: "Computer Network", file: "Computer Network" },
-  { title: "OOPS Notes", file: "OOPS notes" },
+  { title: "DBMS Notes", file: "Arvind DBMS Notes.pdf" },
+  { title: "Operating System", file: "Arvind Operating system.pdf" },
+  { title: "Computer Network", file: "Computer Network.pdf" },
+  { title: "OOPS Notes", file: "OOPS notes.pdf" },
 ];
 
 const Notes = () => {
