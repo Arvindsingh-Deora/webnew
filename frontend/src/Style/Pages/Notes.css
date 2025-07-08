@@ -1,48 +1,68 @@
 .notes-container {
-  padding: 80px;
+  padding: 90px;
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  background: #f0f4f8;
-  min-height: 150vh;
 }
 
-.notes-container h1 {
-  font-size: 2.5rem;
+.upload-timing {
+  font-size: 16px;
+  color: #444;
   margin-bottom: 30px;
-  color: #333;
+}
+
+.category-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.category-card {
+  background-color: #f0f8ff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #007bff;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-card:hover {
+  background-color: #d6eaff;
+  transform: scale(1.05);
+}
+
+.notes-section {
+  margin-top: 30px;
 }
 
 .notes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .note-card {
-  background: white;
+  background-color: #fff;
+  border: 1px solid #ccc;
   padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.note-card:hover {
-  transform: translateY(-5px);
-}
-
-.note-card h2 {
-  font-size: 1.25rem;
-  color: #007bff;
-  margin-bottom: 10px;
+  width: 240px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .download-btn {
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
   border: none;
+  padding: 10px 16px;
   border-radius: 8px;
-  font-weight: bold;
+  margin-top: 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .download-btn:hover {

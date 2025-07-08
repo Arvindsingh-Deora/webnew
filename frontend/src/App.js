@@ -7,6 +7,7 @@ import Navbar from './Navbar';
 import Project from './Pages/Project';
 import Career from './Pages/Career';
 import Notes from './Pages/Notes';
+import ServicePage from './Pages/ServicePage';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/" element={< Home />} />
       <Route path = "/Notes" element = {<Notes/>} />
       <Route path = "/About" element = {<About/>} />
+       <Route path = "/Service" element = {< ServicePage />} />
       <Route path = "/Project" element = {<Project />} />
       <Route path = "/carrer" element = {< Career />} />
     </Routes>
