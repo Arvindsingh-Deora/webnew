@@ -1,6 +1,6 @@
 /* General container styling */
 .notes-container {
-  padding: 60px 20px;
+  padding: 90px 20px;
   font-family: 'Inter', sans-serif;
   text-align: center;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
@@ -202,7 +202,7 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .notes-container {
-    padding: 40px 15px;
+    padding: 90px 15px;
   }
 
   .category-card {
