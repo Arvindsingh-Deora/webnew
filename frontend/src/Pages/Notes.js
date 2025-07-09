@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Style/Pages/Notes.css';
 import { Helmet } from 'react-helmet';
 
+
 const Notes = () => {
   const [activeSection, setActiveSection] = useState(null); // 'core', 'dsa', 'web'
 
@@ -25,18 +26,34 @@ const Notes = () => {
       {notesArray.map((note, index) => (
         <div className="note-card" key={index}>
           <h2>{note.title}</h2>
-          <a
-            href={`/Notes/${note.file}`}
-            download
-            onClick={() =>
-              window.gtag && window.gtag('event', 'download', {
-                event_category: 'PDF',
-                event_label: note.title,
-              })
-            }
-          >
-            <button className="download-btn">⬇️ Download PDF</button>
-          </a>
+          <div className="button-group">
+            <a
+              href={`/Notes/${note.file}`}
+              download
+              onClick={() =>
+                window.gtag && window.gtag('event', 'download', {
+                  event_category: 'PDF',
+                  event_label: note.title,
+                })
+              }
+            >
+              <button className="download-btn">⬇️ Download PDF</button>
+            </a>
+
+            <a
+              href={`/Notes/${note.file}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() =>
+                window.gtag && window.gtag('event', 'read_online', {
+                  event_category: 'PDF',
+                  event_label: note.title,
+                })
+              }
+            >
+              <button className="read-btn">📖 Read Online</button>
+            </a>
+          </div>
         </div>
       ))}
     </div>

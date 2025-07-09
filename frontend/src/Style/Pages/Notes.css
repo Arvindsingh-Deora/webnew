@@ -1,70 +1,241 @@
+/* General container styling */
 .notes-container {
-  padding: 90px;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif;
   text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+  min-height: 100vh;
+  transition: background 0.5s ease;
 }
 
+/* Upload timing text */
 .upload-timing {
-  font-size: 16px;
-  color: #444;
-  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
 }
 
+/* Category boxes container */
 .category-boxes {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 2.5rem;
 }
 
+/* Category card styling */
 .category-card {
-  background-color: #f0f8ff;
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  background: linear-gradient(145deg, #ffffff, #e6f0ff);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a3c6e;
   cursor: pointer;
-  border: 2px solid #007bff;
-  transition: background-color 0.3s, transform 0.2s;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Category card hover effect */
 .category-card:hover {
-  background-color: #d6eaff;
-  transform: scale(1.05);
+  background: linear-gradient(145deg, #d6eaff, #b3d4ff);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+  border-color: #007bff;
 }
 
+/* Add a subtle glow effect on hover */
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.category-card:hover::before {
+  left: 100%;
+}
+
+/* Notes section styling */
 .notes-section {
-  margin-top: 30px;
+  margin-top: 2.5rem;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Notes grid styling */
 .notes-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   justify-content: center;
+  padding: 0 1rem;
 }
 
+/* Note card styling */
 .note-card {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 240px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
 }
 
-.download-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 16px;
+.note-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Note card title */
+.note-card h2 {
+  font-size: 1.25rem;
+  color: #1a3c6e;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* General button styling */
+.download-btn,
+.read-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   border-radius: 8px;
-  margin-top: 10px;
+  border: none;
   cursor: pointer;
-  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Download button */
+.download-btn {
+  background: linear-gradient(90deg, #007bff, #0056b3);
 }
 
 .download-btn:hover {
-  background-color: #0056b3;
+  background: linear-gradient(90deg, #0056b3, #003d82);
+  transform: translateY(-2px);
+}
+
+/* Read button */
+.read-btn {
+  background: linear-gradient(90deg, #28a745, #218838);
+}
+
+.read-btn:hover {
+  background: linear-gradient(90deg, #218838, #1a6b2e);
+  transform: translateY(-2px);
+}
+
+/* Button hover effect with glow */
+.download-btn::before,
+.read-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.download-btn:hover::before,
+.read-btn:hover::before {
+  left: 100%;
+}
+
+/* Heading styling */
+.notes-container h1 {
+  font-size: 2.5rem;
+  color: #1a3c6e;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .notes-container {
+    padding: 40px 15px;
+  }
+
+  .category-card {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .note-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .notes-container h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .notes-container {
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: #e0e0e0;
+  }
+  .category-card {
+    background: linear-gradient(145deg, #2c2c2c, #3a3a3a);
+    color: #e0e0e0;
+  }
+  .note-card {
+    background: #2c2c2c;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+  }
 }
