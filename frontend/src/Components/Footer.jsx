@@ -6,7 +6,7 @@ import "../Style/Footer.css";
 const Footer = () => {
   const socialLinks = [
     { url: "https://github.com/Arvindsingh-Deora", icon: <FaGithub /> },
-    { url: "https://linkedin.com/in/arvindsinghdeora", icon: <FaLinkedin /> },
+    { url: "https://www.linkedin.com/in/arvindsingh-deora-043707223/", icon: <FaLinkedin /> },
     { url: "https://instagram.com/arvindsingh.deora", icon: <FaInstagram /> },
     { url: "https://linktr.ee/arvind_deora_12", icon: <FaLightbulb /> },
   ];
