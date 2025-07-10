@@ -16,12 +16,14 @@ const navigate = useNavigate();
     { title: "Operating System", file: "operating-system.pdf" },
     { title: "Computer Network", file: "computer-network.pdf" },
     { title: "OOPS Notes", file: "oops-notes.pdf" },
-    { title: "System Design Notes", file: "System Design.pdf" },
+   
     
   ];
 
   const dsaNotes = [
     // { title: "Striver SDE Sheet - Arrays", file: "sde-arrays.pdf" },
+    { title: "java basics", file: "Java Basic.pdf" },
+    { title: "Array", file: "Array-notes.pdf" },
   ];
 
   const webDevNotes = [
