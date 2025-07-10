@@ -1,42 +1,133 @@
 .webdev-container {
-  padding: 120px;
+  padding: 100px 20px;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+  min-height: 100vh;
   text-align: center;
 }
 
+/* Roadmap Section */
 .roadmap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 40px;
+  gap: 12px;
 }
 
 .roadmap-step {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a3c6e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
-  margin: 10px;
+  gap: 10px;
 }
 
 .arrow {
-  margin: 0 10px;
+  font-size: 1.4rem;
+  color: #007bff;
 }
 
+/* Notes Grid Styling */
 .notes-grid {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 5px;
 }
 
 .note-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  background: #f9f9f9;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease-in-out;
+  text-align: left;
 }
 
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.note-card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a3c6e;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
 .button-group {
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.download-btn,
+.read-btn {
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.download-btn {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+.download-btn:hover {
+  background: linear-gradient(90deg, #0056b3, #003d82);
+}
+
+.read-btn {
+  background: linear-gradient(90deg, #28a745, #218838);
+}
+
+.read-btn:hover {
+  background: linear-gradient(90deg, #218838, #1a6b2e);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .roadmap-step {
+    flex-direction: column;
+    font-size: 0.95rem;
+  }
+
+  .arrow {
+    display: none; /* Hide arrows on small screen to keep clean */
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (prefers-color-scheme: white) {
+  .webdev-container {
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: #e0e0e0;
+  }
+
+  .note-card {
+    background: #2c2c2c;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .roadmap-step {
+    background: #3a3a3a;
+    color: #ffffff;
+  }
 }

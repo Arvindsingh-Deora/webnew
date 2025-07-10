@@ -1,42 +1,30 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../src/Style/Navbar.css"; // Import CSS
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons for mobile menu
+import "../src/Style/Navbar.css"; // CSS path
+import { FaBars, FaTimes } from "react-icons/fa"; // Menu icons
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
+      {/* Logo */}
       <div className="logo">Arvind</div>
 
-      <ul className={isOpen ? "nav-links open" : "nav-links"}>
-        <li>
-          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-        </li>
-        <li>
-          <Link to="/Notes" onClick={() => setIsOpen(false)}>Notes</Link>
-        </li>
-        <li>
-          <Link to="/Service" onClick={() => setIsOpen(false)}>Service</Link>
-        </li>
-        <li>
-          <Link to="/carrer" onClick={() => setIsOpen(false)}>Career</Link>
-        </li>
-        <li>
-          <Link to="/project" onClick={() => setIsOpen(false)}>Project</Link>
-        </li>
-        <li>
-          <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
-        </li>
-        <li>
-          <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
-        </li>
+      {/* Navigation Links */}
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+        <li><Link to="/Notes" onClick={() => setMenuOpen(false)}>Notes</Link></li>
+        <li><Link to="/Service" onClick={() => setMenuOpen(false)}>Service</Link></li>
+        <li><Link to="/carrer" onClick={() => setMenuOpen(false)}>Career</Link></li>
+        <li><Link to="/project" onClick={() => setMenuOpen(false)}>Project</Link></li>
+        <li><Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
+        <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
       </ul>
 
-      {/* Mobile Menu Button */}
-      <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <FaTimes /> : <FaBars />}
+      {/* Mobile Menu Toggle Icon */}
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
       </div>
     </nav>
   );

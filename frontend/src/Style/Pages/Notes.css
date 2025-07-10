@@ -194,7 +194,7 @@ notes-grid {
 /* Heading styling */
 .notes-container h1 {
   font-size: 2.5rem;
-  color: #1a3c6e;
+  color: #ee220b;
   margin-bottom: 1.5rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -238,17 +238,17 @@ notes-grid {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   .notes-container {
-    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    background: linear-gradient(135deg, #d29797, #2c2c2c);
     color: #e0e0e0;
   }
   .category-card {
-    background: linear-gradient(145deg, #2c2c2c, #3a3a3a);
+    background: linear-gradient(145deg, #dd3636, #3a3a3a);
     color: #e0e0e0;
   }
   .note-card {
-    background: #2c2c2c;
+    background: #dc7474;
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
   }
 }
