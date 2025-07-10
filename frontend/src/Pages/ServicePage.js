@@ -3,6 +3,7 @@ import '../Style/Pages/Service.css';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom'; // 👈 Add this
 
+
 const services = [
   {
     title: "Frontend Website",
@@ -67,6 +68,7 @@ const ServicePage = () => {
           </div>
         ))}
       </div>
+     
     </div>
   );
 };

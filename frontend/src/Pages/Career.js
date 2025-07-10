@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import '../Style/Pages/Carrer.css'; 
 import qrCodeImage from '../assets/qrCodeImage.jpg';
 
+
 const Career = () => {
   const [activeTab, setActiveTab] = useState("personal");
   const [showModal, setShowModal] = useState(false);
@@ -122,6 +123,7 @@ const Career = () => {
           </div>
         </div>
       )}
+    
     </div>
   );
 };

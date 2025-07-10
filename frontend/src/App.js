@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home';
 import About from './Pages/About';
-
+import Footer from "./Components/Footer";
 import Navbar from './Navbar';
 import Project from './Pages/Project';
 import Career from './Pages/Career';
@@ -27,6 +27,7 @@ const App = () => {
       <Route path = "/blog" element = {< BlogPage />} />
        <Route path="/web-development" element={< WebDevelopment />} />
     </Routes>
+    < Footer />
    </Router>
   )
 }

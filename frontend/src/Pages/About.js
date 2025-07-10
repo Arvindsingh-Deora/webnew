@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import '../Style/Pages/About.css'; // Importing CSS for styling
 import { FaLinkedin, FaInstagram, FaGithub, FaLink } from 'react-icons/fa';
 
+
 const About = () => {
   const education = [
     {
@@ -131,36 +132,7 @@ const About = () => {
       </div>
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-links">
-            <h3>Pages</h3>
-            <a href="#top">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <div className="footer-services">
-            <h3>Services</h3>
-            <p>Web Development</p>
-            <p>UI/UX Design</p>
-            <p>Backend Development</p>
-            <p>Competitive Programming Solutions</p>
-          </div>
-          <div className="footer-social">
-            <h3>Connect</h3>
-            {socialLinks.map((link, index) => (
-              <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="footer-social-icon">
-                {link.icon}
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© 2025 Arvindsingh Deora. All Rights Reserved.</p>
-          <a href="https://www.instagram.com/arvind_deora_12/" target="_blank" rel="noopener noreferrer">Powered by Arvind</a>
-        </div>
-      </footer>
+    
     </div>
   );
 };

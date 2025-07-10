@@ -84,47 +84,8 @@ const ProjectCard = ({ project }) => (
 );
 
 // Footer Component
-const Footer = () => (
-  <footer className="footer">
-    <div className="footer-content">
-      <div className="footer-links">
-        <h3>Pages</h3>
-        <a href="#top">Home</a>
-        <a href="/services">Services</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-      </div>
-      <div className="footer-services">
-        <h3>Services</h3>
-        <p>Web Development</p>
-        <p>UI/UX Design</p>
-        <p>Backend Development</p>
-        <p>Competitive Programming Solutions</p>
-      </div>
-      <div className="footer-social">
-        <h3>Connect</h3>
-        {socialLinksData.map((link, index) => (
-          <a
-            key={index}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-social-icon"
-            aria-label={link.alt}
-          >
-            {link.icon}
-          </a>
-        ))}
-      </div>
-    </div>
-    <div className="footer-bottom">
-      <p>© {new Date().getFullYear()} Arvindsingh Deora. All Rights Reserved.</p>
-      <a href="https://github.com/Arvindsingh-Deora" target="_blank" rel="noopener noreferrer">
-        Explore My Work
-      </a>
-    </div>
-  </footer>
-);
+
+
 
 // Main Projects Component
 const Projects = () => {
@@ -136,7 +97,7 @@ const Projects = () => {
           <ProjectCard key={index} project={project} />
         ))}
       </div>
-      <Footer />
+      
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import '../Style/Pages/BlogPage.css';
 import { Helmet } from 'react-helmet';
 
+
 const BlogPage = () => {
   return (
     <div className="blog-container">
@@ -24,6 +25,7 @@ const BlogPage = () => {
         <h2>Coming Soon...</h2>
         <p>You can expect deep and real content here soon. Stay tuned!</p>
       </div>
+      
     </div>
   );
 };

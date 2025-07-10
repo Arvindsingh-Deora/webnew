@@ -6,6 +6,7 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { Helmet } from "react-helmet";
 
+
 const Home = () => {
   const skills = [
     { name: "React", percentage: 85 },
@@ -210,12 +211,12 @@ const Home = () => {
         </div>
 
         {/* Footer */}
-        <footer className="footer">
+        {/* <footer className="footer">
           <div className="footer-content">
             <div className="footer-links">
               <h3>Pages</h3>
               <a href="#home">Home</a>
-              <a href="/career">Services</a>
+              <a href="/carrer">Career</a>
               <a href="/about">About</a>
               <a href="/project">Project</a>
             </div>
@@ -251,7 +252,10 @@ const Home = () => {
               Explore My Work
             </a>
           </div>
-        </footer>
+
+        </footer> */}
+
+      
       </div>
     </>
   );

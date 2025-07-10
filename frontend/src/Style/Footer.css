@@ -1,0 +1,75 @@
+/* Footer base styling */
+.footer {
+  width: 100%;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  padding: 40px 0 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+/* Footer content layout */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
+
+/* Footer columns */
+.footer-links,
+.footer-services,
+.footer-social {
+  margin: 10px 20px;
+  min-width: 150px;
+}
+
+/* Headings */
+.footer h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+
+/* Footer links */
+.footer a {
+  display: block;
+  color: #fff;
+  margin: 6px 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffcc00;
+}
+
+/* Social icons */
+.footer-social-icon {
+  font-size: 1.4rem;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Bottom copyright row */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #fff;
+  padding-top: 12px;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.footer-bottom a {
+  margin-left: 10px;
+  color: #ffd700;
+  text-decoration: underline;
+}

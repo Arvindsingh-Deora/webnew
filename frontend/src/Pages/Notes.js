@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
 const Notes = () => {
   const [activeSection, setActiveSection] = useState(null); // 'core', 'dsa', 'web'
 const navigate = useNavigate();
@@ -118,6 +119,7 @@ const navigate = useNavigate();
           {renderNotes(webDevNotes)}
         </section>
       )}
+        
     </div>
   );
 };
