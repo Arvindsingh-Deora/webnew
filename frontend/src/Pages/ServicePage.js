@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'; // 👈 Add this
 const services = [
   {
     title: "Frontend Website",
-    price: "₹10,000",
+    price: "₹40,000",
     features: [
       "Responsive Design",
       "Custom UI/UX",
@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Frontend + Backend",
-    price: "₹20,000",
+    price: "₹90,000",
     features: [
       "Frontend Design",
       "Backend APIs with Node.js & MongoDB",
@@ -26,7 +26,7 @@ const services = [
   },
   {
     title: "Frontend + Backend + SEO",
-    price: "₹25,000",
+    price: "₹1,25,000",
     features: [
       "Everything in Full Stack",
       "SEO Optimization",

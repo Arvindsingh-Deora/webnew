@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import '../Style/Pages/Notes.css';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 
 const Notes = () => {
   const [activeSection, setActiveSection] = useState(null); // 'core', 'dsa', 'web'
-
+const navigate = useNavigate();
   const coreSubjects = [
     { title: "DBMS Notes", file: "dbms-notes.pdf" },
     { title: "Operating System", file: "operating-system.pdf" },
     { title: "Computer Network", file: "computer-network.pdf" },
     { title: "OOPS Notes", file: "oops-notes.pdf" },
+    { title: "System Design Notes", file: "System Design.pdf" },
+    
   ];
 
   const dsaNotes = [
@@ -85,9 +91,10 @@ const Notes = () => {
         <div className="category-card" onClick={() => setActiveSection('dsa')}>
           📚 DSA
         </div>
-        <div className="category-card" onClick={() => setActiveSection('web')}>
+        <div className="category-card" onClick={() =>navigate('/web-development')
+}>
           💻 Web Development
-        </div>
+           </div>
       </div>
 
       {/* Show selected notes section */}

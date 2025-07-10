@@ -9,6 +9,8 @@ import Career from './Pages/Career';
 import Notes from './Pages/Notes';
 import ServicePage from './Pages/ServicePage';
 import BlogPage from './Pages/BlogPage';
+import WebDevelopment from './Pages/webDevelopment';
+
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
       <Route path = "/Project" element = {<Project />} />
       <Route path = "/carrer" element = {< Career />} />
       <Route path = "/blog" element = {< BlogPage />} />
+       <Route path="/web-development" element={< WebDevelopment />} />
     </Routes>
    </Router>
   )

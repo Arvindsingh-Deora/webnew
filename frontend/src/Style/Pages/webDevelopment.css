@@ -1,0 +1,42 @@
+.webdev-container {
+  padding: 120px;
+  text-align: center;
+}
+
+.roadmap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.roadmap-step {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.arrow {
+  margin: 0 10px;
+}
+
+.notes-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 20px;
+}
+
+.note-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
