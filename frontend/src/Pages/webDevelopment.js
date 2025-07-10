@@ -1,6 +1,6 @@
-import React from 'react';
-import '../Style/Pages/webDevelopment.css';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import "../Style/Pages/webDevelopment.css";
+import { Helmet } from "react-helmet";
 
 // Roadmap Topics
 const roadmap = [
@@ -12,14 +12,14 @@ const roadmap = [
   "Express",
   "MongoDB",
   "GitHub",
-  "Deployment"
+  "Deployment",
 ];
 
 // Notes List
 const webDevNotes = [
-  { title: "HTML Notes", file: "htmt.pdf" },
-  { title: "CSS Notes", file: "css-notes.pdf" },
-  { title: "JavaScript Notes", file: "javascript-notes.pdf" },
+  { title: "HTML Notes", file: "html.pdf" },
+  { title: "CSS Notes", file: "css-note.pdf" },
+  { title: "JavaScript Notes", file: "Javascript-notes.pdf" },
   { title: "React Basics", file: "react-basics.pdf" },
   { title: "File Structure Notes", file: "fileStructure-notes.pdf" },
   { title: "Backend Notes", file: "backend-notes.pdf" },
@@ -58,10 +58,14 @@ const WebDevelopment = () => {
           <div className="note-card" key={index}>
             <h3>{note.title}</h3>
             <div className="button-group">
-              <a href={`/Notes/web-Notes/${note.file}`} download>
+              <a href={`/Notes/Web-Notes/${note.file}`} download>
                 <button className="download-btn">⬇️ Download</button>
               </a>
-              <a href={`/Notes/web-Notes/${note.file}`} target="_blank" rel="noreferrer">
+              <a
+                href={`/Notes/Web-Notes/${note.file}`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <button className="read-btn">📖 Read</button>
               </a>
             </div>
