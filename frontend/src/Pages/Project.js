@@ -7,6 +7,9 @@ import bubbleGameThumb from '../assets/Thumnail/Bubble game.png';
 import mechcareThumb from '../assets/Thumnail/Mechcare.png';
 import healthcareThumb from '../assets/Thumnail/Healthcare.png';
 import chatSystemThumb from '../assets/Thumnail/Chat System.png';
+import AIFace from '../assets/Thumnail/AI Face.png';
+import BlogApp from '../assets/Thumnail/Blog App.png';
+import CubeFitness from '../assets/Thumnail/Cube Fitness.png';
 
 // Project data
 const projectsData = [
@@ -32,6 +35,27 @@ const projectsData = [
     thumbnail: chatSystemThumb,
     tech: ["React", "Node.js", "Socket.io"],
   },
+  {
+    title: "AI Face Analyzer",
+    description: "AI-powered tool that analyzes facial symmetry using golden ratio and compares faces intelligently.",
+    link: "https://ai-face-analyzer-two.vercel.app/",
+    thumbnail: AIFace,
+    tech: ["React", "Machine Learning", "AI"],
+  },
+  {
+    title: "Softdrink App",
+    description: "A sleek and modern ecommerce frontend for soft drink ordering, built with Next.js.",
+    link: "https://softdrink-plum.vercel.app/",
+    thumbnail:BlogApp,
+    tech: ["Next.js", "Tailwind CSS", "React"],
+  },{
+    title: "Blog App",
+    description: "A full-stack MERN blog platform to post and manage articles with real-time updates.",
+    link: "https://arvindblogs.vercel.app/",
+    thumbnail: CubeFitness,
+    tech: ["MongoDB", "Express", "React", "Node.js"],
+  },
+
   {
     title: "Bubble Game",
     description: "A fun, interactive game where players pop bubbles against a timer, built with HTML, CSS, and JavaScript to test reflexes.",
