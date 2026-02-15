@@ -147,7 +147,7 @@ const Home = () => {
             </div>
             <div className="cta-buttons">
               <a
-                href="/Arvind_SDE_Resume.pdf"
+                href="/Arvind_SDE1_Resume.pdf"
                 download
                 className="resume-btn"
               >
